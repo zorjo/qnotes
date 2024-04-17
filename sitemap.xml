@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zorjo.github.io/qnotes/index.html</loc>
-    <lastmod>2024-03-30T17:01:57.391Z</lastmod>
+    <lastmod>2024-04-17T20:32:07.883Z</lastmod>
   </url>
   <url>
-    <loc>https://zorjo.github.io/qnotes/posts/post-with-code/index.html</loc>
-    <lastmod>2024-03-30T17:01:57.391Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zorjo.github.io/qnotes/posts/welcome/index.html</loc>
-    <lastmod>2024-03-30T17:01:57.391Z</lastmod>
+    <loc>https://zorjo.github.io/qnotes/posts/another page.html</loc>
+    <lastmod>2024-04-17T20:32:07.883Z</lastmod>
   </url>
   <url>
     <loc>https://zorjo.github.io/qnotes/about.html</loc>
-    <lastmod>2024-03-30T17:01:57.391Z</lastmod>
+    <lastmod>2024-04-17T20:32:07.883Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zorjo.github.io/qnotes/posts/welcome/index.html</loc>
+    <lastmod>2024-04-17T20:32:07.883Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zorjo.github.io/qnotes/posts/post-with-code/index.html</loc>
+    <lastmod>2024-04-17T20:32:07.883Z</lastmod>
   </url>
 </urlset>

@@ -4,14 +4,21 @@
     "href": "index.html",
     "title": "plonker",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nMar 24, 2024\n\n\nPost With Code\n\n\nHarlow Malloc\n\n\n\n\nMar 21, 2024\n\n\nWelcome To My Blog\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n \n\n\nThings to do\n\n\n \n\n\n\n\nMar 24, 2024\n\n\nPost With Code\n\n\nHarlow Malloc\n\n\n\n\nMar 21, 2024\n\n\nWelcome To My Blog\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/another page.html",
+    "href": "posts/another page.html",
+    "title": "Things to do",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "It’s plonkin’ time! Time to plonk"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About this blog",
+    "section": "",
+    "text": "It’s plonkin’ time! Time to plonk"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -21,10 +28,10 @@
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About this blog",
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
     "section": "",
-    "text": "It’s plonkin’ time! Time to plonk"
+    "text": "This is a post with executable code."
   }
 ]
