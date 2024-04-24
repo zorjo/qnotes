@@ -4,14 +4,21 @@
     "href": "index.html",
     "title": "plonker",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n \n\n\nThings to do\n\n\n \n\n\n\n\nMar 24, 2024\n\n\nPost With Code\n\n\nHarlow Malloc\n\n\n\n\nMar 21, 2024\n\n\nWelcome To My Blog\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n \n\n\nA brief introduction to machine learning and deep learning\n\n\nX \n\n\n\n\nMar 24, 2024\n\n\nPost With Code\n\n\nHarlow Malloc\n\n\n\n\nMar 21, 2024\n\n\nWelcome To My Blog\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/another page.html",
     "href": "posts/another page.html",
-    "title": "Things to do",
+    "title": "A brief introduction to machine learning and deep learning",
     "section": "",
-    "text": "It’s plonkin’ time! Time to plonk"
+    "text": "The idea of machine learning is a bit adrift, and not really clear.\nIt is with this idea that we approach this and move forward"
+  },
+  {
+    "objectID": "posts/another page.html#introduction",
+    "href": "posts/another page.html#introduction",
+    "title": "A brief introduction to machine learning and deep learning",
+    "section": "",
+    "text": "The idea of machine learning is a bit adrift, and not really clear.\nIt is with this idea that we approach this and move forward"
   },
   {
     "objectID": "about.html",
