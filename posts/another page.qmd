@@ -1,6 +1,12 @@
 ---
-title: "Things to do "
+title: "A brief introduction to machine learning and deep learning"
 #image: profile.jpg
+author: "X"
 ---
 
-It's plonkin' time! Time to plonk
+
+## Introduction
+The idea of machine learning is a bit adrift, and not really clear. 
+
+
+It is with this idea that we approach this and move forward 
