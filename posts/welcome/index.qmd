@@ -1,6 +1,6 @@
 ---
 title: "Welcome To My Blog"
-author: "Tristan O'Malley"
+author: "zorjo"
 date: "2024-03-21"
 categories: [news]
 ---
