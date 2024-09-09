@@ -1,7 +1,6 @@
 ---
 title: "A brief introduction to machine learning and deep learning"
 #image: profile.jpg
-author: "X"
 ---
 
 
