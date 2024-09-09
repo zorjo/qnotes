@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zorjo.github.io/qnotes/index.html</loc>
-    <lastmod>2024-07-29T04:08:54.648Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zorjo.github.io/qnotes/posts/another page.html</loc>
-    <lastmod>2024-07-29T04:08:54.648Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zorjo.github.io/qnotes/about.html</loc>
-    <lastmod>2024-07-29T04:08:54.648Z</lastmod>
+    <loc>https://zorjo.github.io/qnotes/posts/welcome/index.html</loc>
+    <lastmod>2024-09-09T20:30:09.121Z</lastmod>
   </url>
   <url>
     <loc>https://zorjo.github.io/qnotes/posts/post-with-code/index.html</loc>
-    <lastmod>2024-07-29T04:08:54.648Z</lastmod>
+    <lastmod>2024-09-09T20:30:09.121Z</lastmod>
   </url>
   <url>
-    <loc>https://zorjo.github.io/qnotes/posts/welcome/index.html</loc>
-    <lastmod>2024-07-29T04:08:54.648Z</lastmod>
+    <loc>https://zorjo.github.io/qnotes/index.html</loc>
+    <lastmod>2024-09-09T20:30:09.121Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zorjo.github.io/qnotes/about.html</loc>
+    <lastmod>2024-09-09T20:30:09.121Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zorjo.github.io/qnotes/posts/another page.html</loc>
+    <lastmod>2024-09-09T20:30:09.121Z</lastmod>
   </url>
 </urlset>
