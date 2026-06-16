@@ -1,0 +1,84 @@
+---
+title: "Mastering the Command Line: A Developer's Guide to GitHub CLI (gh)"
+date: "2026-06-16"
+categories: [git, github, tutorial, CLI]
+description: "Learn how to accelerate your GitHub development workflows directly from the terminal using the official GitHub CLI tool."
+image: "thumbnail.jpg"
+---
+
+As developers, we spend a massive portion of our day in the terminal. Whether it's running tests, managing dependencies, or spinning up local development servers, the command line is our home. Yet, when it comes to GitHub operations—like opening pull requests, reviewing issues, or checking CI status—many developers still context-switch to the browser.
+
+Enter the **GitHub CLI (`gh`)**. It brings GitHub features directly to your terminal, seamlessly integrating with your git workflow.
+
+Let's look at the key commands and workflows that can supercharge your productivity.
+
+## Getting Started: Authentication
+
+First, authenticate your GitHub account with:
+
+```bash
+gh auth login
+```
+
+The interactive prompt will guide you through authenticating with your browser or a personal access token. Once configured, you can verify your active session:
+
+```bash
+gh auth status
+```
+
+## Creating & Managing Repositories
+
+You can create a new repository on GitHub without touching the web UI:
+
+```bash
+# Create a new private repository and clone it locally
+gh repo create my-awesome-project --private --clone
+```
+
+If you already have a local repository, you can publish it easily:
+
+```bash
+# Initialize git, then push it to a new remote repo
+gh repo create my-awesome-project --public --source=. --remote=origin --push
+```
+
+## Supercharging your Pull Requests (PRs)
+
+This is where `gh` shines the brightest. Instead of navigating the GitHub UI to create a PR, you can do it with a single command:
+
+```bash
+gh pr create --title "feat: implement user authentication" --body "Closes #14"
+```
+
+Want to see all open PRs in your repository?
+
+```bash
+gh pr list
+```
+
+And if you need to review a colleague's PR, you can check it out locally to run and debug their code directly:
+
+```bash
+# Checkout PR number 42
+gh pr checkout 42
+```
+
+## Monitoring GitHub Actions
+
+Checking the status of your CI/CD workflows is effortless:
+
+```bash
+gh run list
+```
+
+To watch a specific run update in real-time, use:
+
+```bash
+gh run watch
+```
+
+## Conclusion
+
+The GitHub CLI is more than just a wrapper; it's a productivity multiplier that keeps you focused on your code. By integrating it into your shell aliases and daily habits, you'll find yourself leaving the terminal less and getting things done faster.
+
+Happy hacking!
