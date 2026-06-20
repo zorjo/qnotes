@@ -4,6 +4,7 @@ date: "2026-06-16"
 categories: [git, github, tutorial, CLI]
 description: "Learn how to accelerate your GitHub development workflows directly from the terminal using the official GitHub CLI tool."
 image: "thumbnail.jpg"
+title-block-banner: "thumbnail.jpg"
 ---
 
 As developers, we spend a massive portion of our day in the terminal. Whether it's running tests, managing dependencies, or spinning up local development servers, the command line is our home. Yet, when it comes to GitHub operations—like opening pull requests, reviewing issues, or checking CI status—many developers still context-switch to the browser.
@@ -26,6 +27,8 @@ The interactive prompt will guide you through authenticating with your browser o
 gh auth status
 ```
 
+![GitHub CLI Authentication](auth.jpg)
+
 ## Creating & Managing Repositories
 
 You can create a new repository on GitHub without touching the web UI:
@@ -41,6 +44,8 @@ If you already have a local repository, you can publish it easily:
 # Initialize git, then push it to a new remote repo
 gh repo create my-awesome-project --public --source=. --remote=origin --push
 ```
+
+![Creating a repository with GitHub CLI](repo.jpg)
 
 ## Supercharging your Pull Requests (PRs)
 
@@ -63,6 +68,8 @@ And if you need to review a colleague's PR, you can check it out locally to run 
 gh pr checkout 42
 ```
 
+![Managing and creating pull requests with gh](pr.jpg)
+
 ## Monitoring GitHub Actions
 
 Checking the status of your CI/CD workflows is effortless:
@@ -76,6 +83,8 @@ To watch a specific run update in real-time, use:
 ```bash
 gh run watch
 ```
+
+![Monitoring GitHub Actions runs in real-time](actions.jpg)
 
 ## Conclusion
 

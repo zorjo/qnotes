@@ -1,0 +1,15 @@
+---
+title: "A brief introduction to machine learning and deep learning"
+date: "2026-06-20"
+categories: [machine-learning, deep-learning, AI]
+description: "An introductory guide exploring the core concepts of machine learning, neural networks, and deep learning architectures."
+image: "ml_preview.jpg"
+title-block-banner: "ml_preview.jpg"
+---
+
+
+## Introduction
+The idea of machine learning is a bit adrift, and not really clear. 
+
+
+It is with this idea that we approach this and move forward 

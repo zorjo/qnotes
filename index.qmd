@@ -3,11 +3,14 @@ title: "plonker"
 listing:
   contents: posts
   sort: "date desc"
-  type: table
+  type: grid
   categories: true
-  fields: ["date","title"]
   sort-ui: false
   filter-ui: false
+  grid-columns: 3
+  image-height: 180px
+  fields: [image, date, title, description, categories, reading-time]
+  feed: true
 page-layout: full
 title-block-banner: false
 ---

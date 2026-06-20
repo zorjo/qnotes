@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
+  <defs>
+    <linearGradient id="plonker-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <!-- Geometric developer-styled letter 'P' -->
+  <path d="M 8,5 L 18,5 C 22.5,5 24,8.5 24,11 C 24,13.5 22.5,17 18,17 L 12,17 L 12,25 L 8,25 Z M 12,9 L 12,13 L 17,13 C 18.5,13 19.5,12 19.5,11 C 19.5,10 18.5,9 17,9 Z" fill="url(#plonker-grad)" />
+</svg>

@@ -2,6 +2,8 @@
 title: "Welcome To My Blog"
 date: "2024-03-21"
 categories: [news]
+image: "thumbnail.jpg"
+title-block-banner: "thumbnail.jpg"
 ---
 
 This is the first post in a Quarto blog. Welcome!
