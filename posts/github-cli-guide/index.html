@@ -107,6 +107,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background-image: url(thumbnail.jpg);
+background-size: cover;
+      }
+</style>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -115,12 +122,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">plonker</span>
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo.svg" alt="" class="navbar-logo light-content">
+    <img src="../../logo.svg" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -132,6 +140,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About this blog</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
@@ -151,47 +164,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Mastering the Command Line: A Developer’s Guide to GitHub CLI (gh)</h1>
+                  <div>
+        <div class="description">
+          Learn how to accelerate your GitHub development workflows directly from the terminal using the official GitHub CLI tool.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">git</div>
+                <div class="quarto-category">github</div>
+                <div class="quarto-category">tutorial</div>
+                <div class="quarto-category">CLI</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 16, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Mastering the Command Line: A Developer’s Guide to GitHub CLI (gh)</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">git</div>
-    <div class="quarto-category">github</div>
-    <div class="quarto-category">tutorial</div>
-    <div class="quarto-category">CLI</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    Learn how to accelerate your GitHub development workflows directly from the terminal using the official GitHub CLI tool.
-  </div>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-<div class="quarto-title-meta">
 
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">June 16, 2026</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <p>As developers, we spend a massive portion of our day in the terminal. Whether it’s running tests, managing dependencies, or spinning up local development servers, the command line is our home. Yet, when it comes to GitHub operations—like opening pull requests, reviewing issues, or checking CI status—many developers still context-switch to the browser.</p>
@@ -203,6 +217,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> auth login</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The interactive prompt will guide you through authenticating with your browser or a personal access token. Once configured, you can verify your active session:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> auth status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="auth.jpg" class="img-fluid figure-img"></p>
+<figcaption>GitHub CLI Authentication</figcaption>
+</figure>
+</div>
 </section>
 <section id="creating-managing-repositories" class="level2">
 <h2 class="anchored" data-anchor-id="creating-managing-repositories">Creating &amp; Managing Repositories</h2>
@@ -212,6 +232,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>If you already have a local repository, you can publish it easily:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize git, then push it to a new remote repo</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> repo create my-awesome-project <span class="at">--public</span> <span class="at">--source</span><span class="op">=</span>. <span class="at">--remote</span><span class="op">=</span>origin <span class="at">--push</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="repo.jpg" class="img-fluid figure-img"></p>
+<figcaption>Creating a repository with GitHub CLI</figcaption>
+</figure>
+</div>
 </section>
 <section id="supercharging-your-pull-requests-prs" class="level2">
 <h2 class="anchored" data-anchor-id="supercharging-your-pull-requests-prs">Supercharging your Pull Requests (PRs)</h2>
@@ -222,6 +248,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>And if you need to review a colleague’s PR, you can check it out locally to run and debug their code directly:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Checkout PR number 42</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> pr checkout 42</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pr.jpg" class="img-fluid figure-img"></p>
+<figcaption>Managing and creating pull requests with gh</figcaption>
+</figure>
+</div>
 </section>
 <section id="monitoring-github-actions" class="level2">
 <h2 class="anchored" data-anchor-id="monitoring-github-actions">Monitoring GitHub Actions</h2>
@@ -229,6 +261,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> run list</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To watch a specific run update in real-time, use:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> run watch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="actions.jpg" class="img-fluid figure-img"></p>
+<figcaption>Monitoring GitHub Actions runs in real-time</figcaption>
+</figure>
+</div>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
@@ -312,7 +350,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/zorjo\.github\.io\/qnotes\/");
+        var filterRegex = new RegExp("https:\/\/zorjo\.github\.io\/qnotes");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -1,8 +1,9 @@
 /* Custom stylesheet for a premium blog experience */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root {
-  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-body: 'Spectral', Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-title: 'SF Pro Display', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
   
   --color-primary: #4f46e5; /* Modern Indigo */
@@ -15,7 +16,7 @@
   --border-focus: rgba(79, 70, 229, 0.2);
   
   --text-dark: #0f172a; /* Slate 900 */
-  --text-body: #334155; /* Slate 700 */
+  --text-body: #000000; /* Black */
   --text-muted: #64748b; /* Slate 500 */
 }
 
@@ -29,7 +30,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
-  font-family: var(--font-body);
+  font-family: var(--font-title);
   font-weight: 800;
   color: var(--text-dark);
   letter-spacing: -0.025em;
@@ -58,6 +59,7 @@ a:hover {
 }
 
 .navbar-brand {
+  font-family: var(--font-title);
   font-weight: 800;
   letter-spacing: -0.03em;
   font-size: 1.35rem;
@@ -66,7 +68,19 @@ a:hover {
   -webkit-text-fill-color: transparent;
 }
 
+.navbar-brand img {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 6px !important;
+  transition: transform 0.25s ease !important;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.08) !important;
+}
+
 .navbar-nav .nav-link {
+  font-family: var(--font-title);
   font-weight: 600;
   font-size: 0.925rem;
   color: var(--text-body) !important;
@@ -159,6 +173,7 @@ a:hover {
 
 /* Category Filter Sidebar Styling */
 .quarto-listing-category-title {
+  font-family: var(--font-mono) !important;
   font-weight: 800;
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -168,6 +183,7 @@ a:hover {
 }
 
 .quarto-listing-category .category {
+  font-family: var(--font-mono) !important;
   display: inline-block;
   padding: 0.4rem 0.85rem;
   margin: 0.25rem;
@@ -187,12 +203,163 @@ a:hover {
   transform: translateY(-1px);
 }
 
+/* Grid Listing Styling */
+.quarto-listing-container-grid {
+  margin-top: 2rem;
+}
+
+.quarto-listing-container-grid .list {
+  gap: 2rem !important; /* Larger gap between grid cards */
+}
+
+/* Base card styling */
+.quarto-grid-item.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.02), 0 2px 6px -1px rgba(0, 0, 0, 0.01) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  overflow: hidden !important;
+}
+
+/* Card hover animation */
+.quarto-grid-item.card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.08), 0 8px 10px -6px rgba(79, 70, 229, 0.04) !important;
+  border-color: rgba(79, 70, 229, 0.25) !important;
+}
+
+/* Card image styling */
+.quarto-grid-item .card-img-top, 
+.quarto-grid-item p.card-img-top {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-bottom: 1px solid var(--border-light) !important;
+}
+
+.quarto-grid-item img.thumbnail-image {
+  object-fit: cover !important;
+  transition: transform 0.5s ease !important;
+}
+
+.quarto-grid-item.card:hover img.thumbnail-image {
+  transform: scale(1.05) !important; /* Subtle scale zoom on hover */
+}
+
+/* Placeholder for missing image */
+.quarto-grid-item .listing-item-img-placeholder {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+  color: var(--color-primary) !important;
+  opacity: 0.8 !important;
+}
+
+/* Card body details */
+.quarto-grid-item .card-body {
+  padding: 1.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Post title */
+.quarto-grid-item .listing-title {
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  line-height: 1.4 !important;
+  color: var(--text-dark) !important;
+  margin-bottom: 0.75rem !important;
+  transition: color 0.2s ease !important;
+}
+
+.quarto-grid-item.card:hover .listing-title {
+  color: var(--color-primary) !important;
+}
+
+/* Reading time and other small stats */
+.quarto-grid-item .listing-reading-time {
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Post description */
+.quarto-grid-item .listing-description {
+  font-size: 0.925rem !important;
+  color: var(--text-body) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1.25rem !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+/* Card attribution footer (date, author, etc.) */
+.quarto-grid-item .card-attribution {
+  margin-top: auto !important; /* Push date to bottom of card */
+  border-top: 1px solid var(--border-light) !important;
+  padding-top: 0.75rem !important;
+  font-size: 0.8rem !important;
+  color: var(--text-muted) !important;
+  font-family: var(--font-mono) !important;
+  font-weight: 500 !important;
+}
+
+/* Categories tags inside grid cards */
+.quarto-grid-item .listing-categories {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.35rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.quarto-grid-item .listing-category {
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  padding: 0.2rem 0.6rem !important;
+  background-color: rgba(79, 70, 229, 0.05) !important;
+  color: var(--color-primary) !important;
+  border-radius: 12px !important;
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.quarto-grid-item .listing-category:hover {
+  background-color: var(--color-primary) !important;
+  color: #ffffff !important;
+}
+
 /* Code block styles */
 code, pre {
   font-family: var(--font-mono) !important;
   font-size: 0.9rem !important;
 }
 
+/* Inline code styling */
+code:not(pre code) {
+  background-color: rgba(79, 70, 229, 0.05);
+  color: var(--color-primary);
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  font-size: 0.85em !important;
+  font-weight: 600;
+  border: 1px solid rgba(79, 70, 229, 0.1);
+  white-space: nowrap !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+}
+
+/* Code block container styling */
 div.sourceCode {
   background-color: #0f172a !important; /* Tailwind Slate 900 */
   border-radius: 12px;
@@ -205,9 +372,89 @@ div.sourceCode {
 div.sourceCode pre {
   margin: 0;
   padding: 1.5rem !important;
+  background-color: transparent !important;
+  overflow-x: auto !important; /* Enable horizontal scrolling */
+  white-space: pre !important; /* Ensure lines don't wrap, triggering scrollbar */
+  word-break: normal !important;
+  word-wrap: normal !important;
 }
 
+/* Enforce high-contrast light slate color as the default for all code text and fallback spans */
+div.sourceCode, 
+div.sourceCode pre, 
+div.sourceCode code, 
+div.sourceCode code span,
+div.sourceCode code a {
+  color: #f8fafc !important; /* Default code text - Slate 50 */
+}
+
+/* Specific class overrides with higher specificity and !important to override Quarto defaults */
+div.sourceCode code span.kw { color: #f43f5e !important; font-weight: bold; } /* Keyword */
+div.sourceCode code span.dt { color: #38bdf8 !important; } /* DataType */
+div.sourceCode code span.dv { color: #fb923c !important; } /* DecVal */
+div.sourceCode code span.bn { color: #fb923c !important; } /* BaseN */
+div.sourceCode code span.fl { color: #fb923c !important; } /* Float */
+div.sourceCode code span.ch { color: #34d399 !important; } /* Char */
+div.sourceCode code span.st { color: #34d399 !important; } /* String */
+div.sourceCode code span.co { color: #64748b !important; font-style: italic; } /* Comment */
+div.sourceCode code span.ot { color: #e2e8f0 !important; } /* Other */
+div.sourceCode code span.al { color: #ef4444 !important; font-weight: bold; } /* Alert */
+div.sourceCode code span.fu { color: #60a5fa !important; } /* Function */
+div.sourceCode code span.er { color: #f87171 !important; } /* Error */
+div.sourceCode code span.wa { color: #fbbf24 !important; } /* Warning */
+div.sourceCode code span.cn { color: #fb7185 !important; } /* Constant */
+div.sourceCode code span.sc { color: #2dd4bf !important; } /* SpecialChar */
+div.sourceCode code span.vs { color: #34d399 !important; } /* VerbatimString */
+div.sourceCode code span.ss { color: #34d399 !important; } /* SpecialString */
+div.sourceCode code span.im { color: #38bdf8 !important; } /* Import */
+div.sourceCode code span.va { color: #e2e8f0 !important; } /* Variable (previously #111111) */
+div.sourceCode code span.cf { color: #c084fc !important; font-weight: bold; } /* ControlFlow */
+div.sourceCode code span.op { color: #94a3b8 !important; } /* Operator (previously #5E5E5E) */
+div.sourceCode code span.bu { color: #f472b6 !important; } /* BuiltIn */
+div.sourceCode code span.ex { color: #38bdf8 !important; } /* Extension/Executable */
+div.sourceCode code span.pp { color: #f472b6 !important; } /* Preprocessor */
+div.sourceCode code span.at { color: #fbbf24 !important; } /* Attribute */
+div.sourceCode code span.do { color: #64748b !important; font-style: italic; } /* Documentation */
+div.sourceCode code span.an { color: #64748b !important; } /* Annotation */
+div.sourceCode code span.cv { color: #64748b !important; font-style: italic; } /* CommentVar */
+div.sourceCode code span.in { color: #fbbf24 !important; } /* Information */
+
 /* Title block banner & Metadata formatting */
+.quarto-title-block {
+  margin-bottom: 2rem;
+}
+
+.quarto-title-banner {
+  position: relative !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  padding: 4rem 2rem !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  margin-top: 1rem !important;
+  margin-bottom: 2rem !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Translucent dark slate overlay to ensure text contrast */
+.quarto-title-banner::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.65) 100%) !important;
+  z-index: 1 !important;
+}
+
+/* Ensure banner contents sit above overlay */
+.quarto-title-banner > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
 .quarto-title-block .title {
   font-size: 3rem;
   font-weight: 850;
@@ -219,26 +466,80 @@ div.sourceCode pre {
   -webkit-text-fill-color: transparent;
 }
 
-.quarto-title-meta {
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  padding: 1.5rem 0;
-  margin: 2.5rem 0;
+.quarto-title-banner .title {
+  font-size: 2.75rem !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.04em !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.2 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important; /* Force override any text clip */
+  background: none !important;
 }
 
-.quarto-title-meta-heading {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-muted);
-  margin-bottom: 0.35rem;
+.quarto-title-banner .description {
+  font-size: 1.15rem !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  line-height: 1.6 !important;
+  max-width: 720px !important;
+  margin-bottom: 1.5rem !important;
 }
 
-.quarto-title-meta-contents {
-  font-size: 0.95rem;
-  color: var(--text-body);
-  font-weight: 600;
+/* Metadata styling inside the banner */
+.quarto-title-banner .quarto-title-meta {
+  font-family: var(--font-mono) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-bottom: none !important;
+  padding: 1rem 0 0 0 !important;
+  margin: 1.5rem 0 0 0 !important;
+  display: flex !important;
+  gap: 2rem !important;
+}
+
+.quarto-title-banner .quarto-title-meta-heading {
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  margin-bottom: 0.2rem !important;
+}
+
+.quarto-title-banner .quarto-title-meta-contents,
+.quarto-title-banner .quarto-title-meta-contents p {
+  font-family: var(--font-mono) !important;
+  font-size: 0.95rem !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Category pill badges inside banner */
+.quarto-title-banner .quarto-categories {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.quarto-title-banner .quarto-categories .quarto-category {
+  font-family: var(--font-mono) !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  padding: 0.25rem 0.75rem !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.quarto-title-banner .quarto-categories .quarto-category:hover {
+  background-color: #ffffff !important;
+  color: var(--color-primary) !important;
+  border-color: #ffffff !important;
 }
 
 /* Post Container Layout */

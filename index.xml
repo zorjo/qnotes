@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>plonker</title>
+<link>https://zorjo.github.io/qnotes/</link>
+<atom:link href="https://zorjo.github.io/qnotes/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Sat, 20 Jun 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>A brief introduction to machine learning and deep learning</title>
+  <link>https://zorjo.github.io/qnotes/posts/machine-learning/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The idea of machine learning is a bit adrift, and not really clear.</p>
+<p>It is with this idea that we approach this and move forward</p>
+
+
+</section>
+
+ ]]></description>
+  <category>machine-learning</category>
+  <category>deep-learning</category>
+  <category>AI</category>
+  <guid>https://zorjo.github.io/qnotes/posts/machine-learning/</guid>
+  <pubDate>Sat, 20 Jun 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://zorjo.github.io/qnotes/posts/machine-learning/ml_preview.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Mastering the Command Line: A Developer’s Guide to GitHub CLI (gh)</title>
+  <link>https://zorjo.github.io/qnotes/posts/github-cli-guide/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>As developers, we spend a massive portion of our day in the terminal. Whether it’s running tests, managing dependencies, or spinning up local development servers, the command line is our home. Yet, when it comes to GitHub operations—like opening pull requests, reviewing issues, or checking CI status—many developers still context-switch to the browser.</p>
+<p>Enter the <strong>GitHub CLI (<code>gh</code>)</strong>. It brings GitHub features directly to your terminal, seamlessly integrating with your git workflow.</p>
+<p>Let’s look at the key commands and workflows that can supercharge your productivity.</p>
+<section id="getting-started-authentication" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started-authentication">Getting Started: Authentication</h2>
+<p>First, authenticate your GitHub account with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">gh</span> auth login</span></code></pre></div></div>
+<p>The interactive prompt will guide you through authenticating with your browser or a personal access token. Once configured, you can verify your active session:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">gh</span> auth status</span></code></pre></div></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zorjo.github.io/qnotes/posts/github-cli-guide/auth.jpg" class="img-fluid figure-img"></p>
+<figcaption>GitHub CLI Authentication</figcaption>
+</figure>
+</div>
+</section>
+<section id="creating-managing-repositories" class="level2">
+<h2 class="anchored" data-anchor-id="creating-managing-repositories">Creating &amp; Managing Repositories</h2>
+<p>You can create a new repository on GitHub without touching the web UI:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Create a new private repository and clone it locally</span></span>
+<span id="cb3-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">gh</span> repo create my-awesome-project <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--private</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--clone</span></span></code></pre></div></div>
+<p>If you already have a local repository, you can publish it easily:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Initialize git, then push it to a new remote repo</span></span>
+<span id="cb4-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">gh</span> repo create my-awesome-project <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--public</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--source</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>. <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--remote</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>origin <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--push</span></span></code></pre></div></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zorjo.github.io/qnotes/posts/github-cli-guide/repo.jpg" class="img-fluid figure-img"></p>
+<figcaption>Creating a repository with GitHub CLI</figcaption>
+</figure>
+</div>
+</section>
+<section id="supercharging-your-pull-requests-prs" class="level2">
+<h2 class="anchored" data-anchor-id="supercharging-your-pull-requests-prs">Supercharging your Pull Requests (PRs)</h2>
+<p>This is where <code>gh</code> shines the brightest. Instead of navigating the GitHub UI to create a PR, you can do it with a single command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">gh</span> pr create <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--title</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"feat: implement user authentication"</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--body</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Closes #14"</span></span></code></pre></div></div>
+<p>Want to see all open PRs in your repository?</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">gh</span> pr list</span></code></pre></div></div>
+<p>And if you need to review a colleague’s PR, you can check it out locally to run and debug their code directly:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Checkout PR number 42</span></span>
+<span id="cb7-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">gh</span> pr checkout 42</span></code></pre></div></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zorjo.github.io/qnotes/posts/github-cli-guide/pr.jpg" class="img-fluid figure-img"></p>
+<figcaption>Managing and creating pull requests with gh</figcaption>
+</figure>
+</div>
+</section>
+<section id="monitoring-github-actions" class="level2">
+<h2 class="anchored" data-anchor-id="monitoring-github-actions">Monitoring GitHub Actions</h2>
+<p>Checking the status of your CI/CD workflows is effortless:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">gh</span> run list</span></code></pre></div></div>
+<p>To watch a specific run update in real-time, use:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">gh</span> run watch</span></code></pre></div></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zorjo.github.io/qnotes/posts/github-cli-guide/actions.jpg" class="img-fluid figure-img"></p>
+<figcaption>Monitoring GitHub Actions runs in real-time</figcaption>
+</figure>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The GitHub CLI is more than just a wrapper; it’s a productivity multiplier that keeps you focused on your code. By integrating it into your shell aliases and daily habits, you’ll find yourself leaving the terminal less and getting things done faster.</p>
+<p>Happy hacking!</p>
+
+
+</section>
+
+ ]]></description>
+  <category>git</category>
+  <category>github</category>
+  <category>tutorial</category>
+  <category>CLI</category>
+  <guid>https://zorjo.github.io/qnotes/posts/github-cli-guide/</guid>
+  <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://zorjo.github.io/qnotes/posts/github-cli-guide/thumbnail.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Post With Code</title>
+  <link>https://zorjo.github.io/qnotes/posts/post-with-code/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is a post with executable code.</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <category>code</category>
+  <category>analysis</category>
+  <guid>https://zorjo.github.io/qnotes/posts/post-with-code/</guid>
+  <pubDate>Sun, 24 Mar 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://zorjo.github.io/qnotes/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Welcome To My Blog</title>
+  <link>https://zorjo.github.io/qnotes/posts/welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is the first post in a Quarto blog. Welcome!</p>
+<p><img src="https://zorjo.github.io/qnotes/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
+<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://zorjo.github.io/qnotes/posts/welcome/</guid>
+  <pubDate>Thu, 21 Mar 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://zorjo.github.io/qnotes/posts/welcome/thumbnail.jpg" medium="image" type="image/jpeg"/>
+</item>
+</channel>
+</rss>
